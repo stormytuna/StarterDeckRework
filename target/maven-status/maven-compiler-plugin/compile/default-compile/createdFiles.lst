@@ -5,6 +5,7 @@ starterdeckrework\util\GeneralUtils.class
 starterdeckrework\util\CardInfo.class
 starterdeckrework\patches\PatchIronclad.class
 starterdeckrework\util\TextureLoader.class
+starterdeckrework\cards\BlueDefendCard.class
 starterdeckrework\cards\BlueStrikeCard.class
 starterdeckrework\cards\FrenzyCard.class
 starterdeckrework\StarterDeckRework.class
