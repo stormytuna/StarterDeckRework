@@ -8,6 +8,7 @@ starterdeckrework\patches\PatchIronclad.class
 starterdeckrework\util\TextureLoader.class
 starterdeckrework\cards\BlueDefendCard.class
 starterdeckrework\cards\BlueStrikeCard.class
+starterdeckrework\patches\PatchWatcher.class
 starterdeckrework\cards\FrenzyCard.class
 starterdeckrework\StarterDeckRework.class
 starterdeckrework\util\KeywordInfo.class
@@ -22,4 +23,5 @@ starterdeckrework\cards\BaseCard.class
 starterdeckrework\patches\PatchDefect$GetStartingDeckPatch.class
 starterdeckrework\util\TextureLoader$1.class
 starterdeckrework\cards\GreenStrikeCard.class
+starterdeckrework\patches\PatchWatcher$GetStartingDeckPatch.class
 starterdeckrework\relics\BaseRelic.class
