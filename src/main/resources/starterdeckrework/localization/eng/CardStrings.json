@@ -22,5 +22,9 @@
     "NAME": "Defend",
     "DESCRIPTION": "Gain !B! Block.",
     "UPGRADE_DESCRIPTION": "Gain !B! Block. NL If this card is discarded from your hand, gain !B! Block."
+  },
+  "${modID}:BlueStrike": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! damage."
   }
 }
