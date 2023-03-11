@@ -1,0 +1,21 @@
+{
+  "${modID}:Frenzy": {
+    "NAME": "Frenzy",
+    "DESCRIPTION": "Lose 2 HP. NL Gain !M! Strength."
+  },
+  "${modID}:RedStrike": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! damage.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Next turn, gain [E]."
+  },
+  "${modID}:RedDefend": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! Block.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block for each enemy in combat."
+  },
+  "${modID}:GreenDefend": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! Block.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL If this card is discarded from your hand, gain !B! Block."
+  }
+}

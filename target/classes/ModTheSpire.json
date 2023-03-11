@@ -1,0 +1,11 @@
+{
+  "modid": "StarterDeckRework",
+  "name": "Starter Deck Rework",
+  "author_list": ["stormytuna"],
+  "description": "Starter Deck Rework reworks the starter deck of each vanilla character, making them more balanced and unique.\n\nChanges:\n\n- Ironclad has 1 Strike removed and 1 Frenzy (Lose 2HP, Gain 2 Strength) added\n\n- Silent has 1 Strike and 1 Defend removed\n\n- Strike+ and Defend+ are now unique for each character:\n\n- Ironclad:\n\n- Strike+: Deal 8 damage. Next turn, gain 1 Energy.\n\n- Defend+: Gain 5 block for each enemy in combat.\n\n- Silent:\n\n- Strike+: Deal 8 damage. Next turn, draw 1 additional card.\n\n- Defend+: Gain 6 Block. If this card is discarded, gain 6 Block.\n\n- Defect:\n\n- Strike+: Deal 6 damage. (Costs 0 Energy)\n\n- Defend+: Gain 7 Block. Draw 1 card.\n\n- Watcher:\n\n- Strike+: Deal 7 damage. Gain 2 Mantra.\n\n- Defend+: Retain. Gain 6 Block.",
+  "version": "0.0.0",
+  "sts_version": "03-07-2022",
+  "mts_version": "3.29.0",
+  "dependencies": ["basemod", "stslib"],
+  "update_json": ""
+}

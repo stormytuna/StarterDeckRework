@@ -1,0 +1,16 @@
+starterdeckrework\cards\RedStrikeCard.class
+starterdeckrework\util\KeywordInfo.class
+starterdeckrework\cards\RedDefendCard.class
+starterdeckrework\util\GeneralUtils.class
+starterdeckrework\cards\GreenDefendCard.class
+starterdeckrework\patches\PatchIronclad$GetStartingDeckPatch.class
+starterdeckrework\util\CardInfo.class
+starterdeckrework\patches\PatchIronclad.class
+starterdeckrework\util\TextureLoader.class
+starterdeckrework\powers\BasePower.class
+starterdeckrework\relics\BaseRelic$1.class
+starterdeckrework\cards\BaseCard.class
+starterdeckrework\cards\FrenzyCard.class
+starterdeckrework\StarterDeckRework.class
+starterdeckrework\util\TextureLoader$1.class
+starterdeckrework\relics\BaseRelic.class
