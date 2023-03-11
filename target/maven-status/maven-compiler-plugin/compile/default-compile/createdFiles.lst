@@ -16,6 +16,7 @@ starterdeckrework\patches\PatchIronclad$GetStartingDeckPatch.class
 starterdeckrework\patches\PatchDefect.class
 starterdeckrework\powers\BasePower.class
 starterdeckrework\relics\BaseRelic$1.class
+starterdeckrework\cards\PurpleStrikeCard.class
 starterdeckrework\cards\BaseCard.class
 starterdeckrework\patches\PatchDefect$GetStartingDeckPatch.class
 starterdeckrework\util\TextureLoader$1.class
