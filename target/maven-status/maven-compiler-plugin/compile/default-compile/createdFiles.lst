@@ -13,4 +13,5 @@ starterdeckrework\cards\BaseCard.class
 starterdeckrework\cards\FrenzyCard.class
 starterdeckrework\StarterDeckRework.class
 starterdeckrework\util\TextureLoader$1.class
+starterdeckrework\cards\GreenStrikeCard.class
 starterdeckrework\relics\BaseRelic.class
