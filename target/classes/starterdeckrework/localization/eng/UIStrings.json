@@ -1,16 +1,16 @@
 {
-  "StarterDeckRework:Example": {
+  "StarterDeckRework:ConfigMenuText": {
     "TEXT": [
-      "This is",
-      "an array of Strings."
-    ],
-    "EXTRA_TEXT": [
-      "This is another",
-      "array of Strings."
-    ],
-    "TEXT_DICT": {
-      "This": "Contains pairs of Strings, used to get values based on keys.",
-      "This is a key": "This is a value."
-    }
+      "Swap Ironclad Strikes (+: Deal 8 damage. Next turn, gain Energy.)",
+      "Swap Ironclad Defends (+: Gain 5 Block for each enemy in combat.)",
+      "Swap 1 Ironclad Strike for Frenzy (Lose 2 HP. Gain 1(+1) Strength.)",
+      "Swap The Silent Strikes (+: Deal 8 damage. Next turn, draw 1 additional card.)",
+      "Swap The Silent Defends (+: Gain 6 Block. If this card is discarded from your hand, gain 6 Block.)",
+      "Remove 1 Strike and 1 Defend from The Silent",
+      "Swap Defect Strikes (+: Deal 6 damage. (0 cost))",
+      "Swap Defect Defends (+: Gain 6 Block. Draw 1 card.)",
+      "Swap Watcher Strikes (+: Deal 7 damage. Gain 2 Mantra.)",
+      "Swap Watcher Defends (+: Retain. Gain 6 Block.)"
+    ]
   }
 }

@@ -4,6 +4,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
 import com.megacrit.cardcrawl.characters.Ironclad;
 import com.megacrit.cardcrawl.characters.Watcher;
+import starterdeckrework.StarterDeckRework;
 import starterdeckrework.util.GeneralUtils;
 
 import java.util.ArrayList;
@@ -14,10 +15,14 @@ public class PatchWatcher {
         @SpirePostfixPatch
         public static ArrayList<String> patch(ArrayList<String> deckList, Watcher instance) {
             // Swap Strikes for better Strikes
-            GeneralUtils.swapAllInstances(deckList, "Strike_P", "StarterDeckRework:PurpleStrike");
+            if (StarterDeckRework.swapWatcherStrikes) {
+                GeneralUtils.swapAllInstances(deckList, "Strike_P", "StarterDeckRework:PurpleStrike");
+            }
 
             // Swap Defends for better Defends
-            GeneralUtils.swapAllInstances(deckList, "Defend_P", "StarterDeckRework:PurpleDefend");
+            if (StarterDeckRework.swapWatcherDefends) {
+                GeneralUtils.swapAllInstances(deckList, "Defend_P", "StarterDeckRework:PurpleDefend");
+            }
 
             return deckList;
         }

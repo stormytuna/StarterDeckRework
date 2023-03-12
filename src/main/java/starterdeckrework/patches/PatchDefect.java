@@ -3,6 +3,7 @@ package starterdeckrework.patches;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
 import com.megacrit.cardcrawl.characters.Defect;
+import starterdeckrework.StarterDeckRework;
 import starterdeckrework.util.GeneralUtils;
 
 import java.util.ArrayList;
@@ -13,10 +14,14 @@ public class PatchDefect {
         @SpirePostfixPatch
         public static ArrayList<String> patch(ArrayList<String> deckList, Defect instance) {
             // Swap Strikes for better Strikes
-            GeneralUtils.swapAllInstances(deckList, "Strike_B", "StarterDeckRework:BlueStrike");
+            if (StarterDeckRework.swapDefectStrikes) {
+                GeneralUtils.swapAllInstances(deckList, "Strike_B", "StarterDeckRework:BlueStrike");
+            }
 
             // Swap Defends for better Defends
-            GeneralUtils.swapAllInstances(deckList, "Defend_B", "StarterDeckRework:BlueDefend");
+            if (StarterDeckRework.swapDefectDefends) {
+                GeneralUtils.swapAllInstances(deckList, "Defend_B", "StarterDeckRework:BlueDefend");
+            }
 
             return deckList;
         }
