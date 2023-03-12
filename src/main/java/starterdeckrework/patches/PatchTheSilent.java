@@ -3,6 +3,7 @@ package starterdeckrework.patches;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
 import com.megacrit.cardcrawl.characters.TheSilent;
+import starterdeckrework.util.GeneralUtils;
 
 import java.util.ArrayList;
 
@@ -11,17 +12,15 @@ public class PatchTheSilent {
     public static class GetStartingDeckPatch {
         @SpirePostfixPatch
         public static ArrayList<String> patch(ArrayList<String> deckList, TheSilent instance) {
-            deckList = new ArrayList<String>();
-            deckList.add("StarterDeckRework:GreenStrike");
-            deckList.add("StarterDeckRework:GreenStrike");
-            deckList.add("StarterDeckRework:GreenStrike");
-            deckList.add("StarterDeckRework:GreenStrike");
-            deckList.add("StarterDeckRework:GreenDefend");
-            deckList.add("StarterDeckRework:GreenDefend");
-            deckList.add("StarterDeckRework:GreenDefend");
-            deckList.add("StarterDeckRework:GreenDefend");
-            deckList.add("Neutralize");
-            deckList.add("Survivor");
+            // Remove a Strike and Defend to make silent 4/4/1/1
+            deckList.remove("Strike_G");
+            deckList.remove("Defend_G");
+
+            // Swap Strikes for better Strikes
+            GeneralUtils.swapAllInstances(deckList, "Strike_G", "StarterDeckRework:GreenStrike");
+
+            // Swap Defends for better Defends
+            GeneralUtils.swapAllInstances(deckList, "Defend_G", "StarterDeckRework:GreenDefend");
 
             return deckList;
         }

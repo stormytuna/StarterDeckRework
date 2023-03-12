@@ -4,6 +4,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
 import com.megacrit.cardcrawl.characters.Ironclad;
 import com.megacrit.cardcrawl.characters.Watcher;
+import starterdeckrework.util.GeneralUtils;
 
 import java.util.ArrayList;
 
@@ -12,18 +13,11 @@ public class PatchWatcher {
     public static class GetStartingDeckPatch {
         @SpirePostfixPatch
         public static ArrayList<String> patch(ArrayList<String> deckList, Watcher instance) {
-            // Replace the starting deck
-            deckList = new ArrayList<String>();
-            deckList.add("StarterDeckRework:PurpleStrike");
-            deckList.add("StarterDeckRework:PurpleStrike");
-            deckList.add("StarterDeckRework:PurpleStrike");
-            deckList.add("StarterDeckRework:PurpleStrike");
-            deckList.add("StarterDeckRework:PurpleDefend");
-            deckList.add("StarterDeckRework:PurpleDefend");
-            deckList.add("StarterDeckRework:PurpleDefend");
-            deckList.add("StarterDeckRework:PurpleDefend");
-            deckList.add("Eruption");
-            deckList.add("Vigilance");
+            // Swap Strikes for better Strikes
+            GeneralUtils.swapAllInstances(deckList, "Strike_P", "StarterDeckRework:PurpleStrike");
+
+            // Swap Defends for better Defends
+            GeneralUtils.swapAllInstances(deckList, "Defend_P", "StarterDeckRework:PurpleDefend");
 
             return deckList;
         }

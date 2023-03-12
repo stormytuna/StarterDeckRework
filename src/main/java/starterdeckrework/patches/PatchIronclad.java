@@ -3,6 +3,7 @@ package starterdeckrework.patches;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
 import com.megacrit.cardcrawl.characters.Ironclad;
+import starterdeckrework.util.GeneralUtils;
 
 import java.util.ArrayList;
 
@@ -11,18 +12,15 @@ public class PatchIronclad {
     public static class GetStartingDeckPatch {
         @SpirePostfixPatch
         public static ArrayList<String> patch(ArrayList<String> deckList, Ironclad instance) {
-            // Replace the starting deck
-            deckList = new ArrayList<String>();
-            deckList.add("StarterDeckRework:RedStrike");
-            deckList.add("StarterDeckRework:RedStrike");
-            deckList.add("StarterDeckRework:RedStrike");
-            deckList.add("StarterDeckRework:RedStrike");
-            deckList.add("StarterDeckRework:RedDefend");
-            deckList.add("StarterDeckRework:RedDefend");
-            deckList.add("StarterDeckRework:RedDefend");
-            deckList.add("StarterDeckRework:RedDefend");
+            // Swap 1 Strike for Frenzy
+            deckList.remove("Strike_R");
             deckList.add("StarterDeckRework:Frenzy");
-            deckList.add("Bash");
+
+            // Swap rest of Strikes for better Strikes
+            GeneralUtils.swapAllInstances(deckList, "Strike_R", "StarterDeckRework:RedStrike");
+
+            // Swap Defends for better Defends
+            GeneralUtils.swapAllInstances(deckList, "Defend_R", "StarterDeckRework:RedDefend");
 
             return deckList;
         }
