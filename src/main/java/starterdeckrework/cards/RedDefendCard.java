@@ -41,7 +41,14 @@ public class RedDefendCard extends BaseCard {
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        int numTimesToGainBlock = this.upgraded ? AbstractDungeon.getCurrRoom().monsters.monsters.size() : 1;
+        int aliveMonstersCount = 0;
+        for (AbstractMonster monster : (AbstractDungeon.getCurrRoom()).monsters.monsters) {
+            if (!monster.isDeadOrEscaped()) {
+                aliveMonstersCount++;
+            }
+        }
+
+        int numTimesToGainBlock = this.upgraded ? aliveMonstersCount : 1;
 
         for (int i = 0; i < numTimesToGainBlock; i++) {
             addToBot(new GainBlockAction(abstractPlayer, abstractPlayer, this.block));
