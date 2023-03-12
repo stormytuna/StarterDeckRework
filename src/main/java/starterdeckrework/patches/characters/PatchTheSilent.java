@@ -1,4 +1,4 @@
-package starterdeckrework.patches;
+package starterdeckrework.patches.characters;
 
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
