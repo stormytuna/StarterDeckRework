@@ -21,7 +21,9 @@ starterdeckrework\StarterDeckRework.class
 starterdeckrework\patches\characters\PatchDefect$GetStartingDeckPatch.class
 starterdeckrework\patches\cards\PatchStrike_Red$Strike_Red_PrefixUpgrade.class
 starterdeckrework\patches\characters\PatchWatcher$GetStartingDeckPatch.class
+starterdeckrework\patches\cards\PatchDefend_Green$Defend_Green_PrefixUpgrade.class
 starterdeckrework\util\KeywordInfo.class
+starterdeckrework\patches\cards\PatchDefend_Green$Defend_Green_AddTriggerOnManualDiscard.class
 starterdeckrework\cards\RedDefendCard.class
 starterdeckrework\patches\cards\PatchStrike_Green.class
 starterdeckrework\cards\GreenDefendCard.class
@@ -30,6 +32,7 @@ starterdeckrework\powers\BasePower.class
 starterdeckrework\patches\cards\PatchStrike_Green$Strike_Green_PrefixUpgrade.class
 starterdeckrework\relics\BaseRelic$1.class
 starterdeckrework\cards\PurpleStrikeCard.class
+starterdeckrework\patches\cards\PatchDefend_Green.class
 starterdeckrework\cards\BaseCard.class
 starterdeckrework\util\TextureLoader$1.class
 starterdeckrework\cards\GreenStrikeCard.class
