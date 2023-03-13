@@ -49,7 +49,7 @@ public class PatchStrike_Red {
     }
 
     @SpirePatch(clz = Strike_Red.class, method = "use")
-    public static class Strike_Red_PostUse {
+    public static class Strike_Red_PostfixUse {
         @SpirePostfixPatch
         public static void patch(Strike_Red __instance, AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
             if (__instance.upgraded) {
