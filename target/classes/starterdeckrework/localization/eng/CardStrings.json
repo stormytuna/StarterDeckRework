@@ -3,7 +3,7 @@
     "NAME": "Frenzy",
     "DESCRIPTION": "Lose 2 HP. NL Gain !M! Strength."
   },
-  "StarterDeckRework:RedStrike": {
+  "StarterDeckRework:Strike_R": {
     "NAME": "Strike",
     "DESCRIPTION": "Deal !D! damage.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Next turn, gain [E]."
