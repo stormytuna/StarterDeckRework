@@ -16,6 +16,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 public class PatchDefend_Red {
+    private static final int UPGRADED_BLOCK = 2;
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("Defend_R");
 
     @SpirePatch(clz = Defend_Red.class, method = "upgrade")
@@ -29,6 +30,10 @@ public class PatchDefend_Red {
                 Method upgradeName = abstractCardClass.getDeclaredMethod("upgradeName");
                 upgradeName.setAccessible(true);
                 upgradeName.invoke(__instance);
+
+                Method upgradeBlock = abstractCardClass.getDeclaredMethod("upgradeBlock", int.class);
+                upgradeBlock.setAccessible(true);
+                upgradeBlock.invoke(__instance, UPGRADED_BLOCK);
 
                 __instance.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
                 __instance.initializeDescription();

@@ -18,7 +18,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 public class PatchStrike_Purple {
-    private static final int UPGRADED_DAMAGE = 1;
+    private static final int UPGRADED_DAMAGE = 2;
     private static final int MANTRA_INCREASE = 2;
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("Strike_P");
 

@@ -1,7 +1,7 @@
 {
   "StarterDeckRework:Frenzy": {
     "NAME": "Frenzy",
-    "DESCRIPTION": "Lose 2 HP. NL Gain !M! Strength."
+    "DESCRIPTION": "Lose 3 HP. NL Gain !M! Strength."
   },
   "StarterDeckRework:Strike_R": {
     "NAME": "Strike",
@@ -36,6 +36,6 @@
   "StarterDeckRework:Defend_P": {
     "NAME": "Defend",
     "DESCRIPTION": "Gain !B! Block.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Gain !B! Block."
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Scry 2."
   }
 }

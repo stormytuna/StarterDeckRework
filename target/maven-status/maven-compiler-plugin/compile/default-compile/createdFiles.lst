@@ -19,6 +19,7 @@ starterdeckrework\util\TextureLoader.class
 starterdeckrework\patches\characters\PatchIronclad$GetStartingDeckPatch.class
 starterdeckrework\patches\cards\PatchDefend_Red.class
 starterdeckrework\patches\cards\PatchStrike_Green$Strike_Green_PrefixUpgrade.class
+starterdeckrework\patches\cards\PatchDefend_Purple$Defend_Purple_PostfixUse.class
 starterdeckrework\patches\cards\PatchDefend_Blue.class
 starterdeckrework\patches\cards\PatchDefend_Green.class
 starterdeckrework\patches\cards\PatchStrike_Green$Strike_Green_PostfixUpgrade.class

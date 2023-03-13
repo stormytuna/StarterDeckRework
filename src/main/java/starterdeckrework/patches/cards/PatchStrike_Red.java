@@ -19,8 +19,8 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 public class PatchStrike_Red {
+    private static final int UPGRADED_DAMAGE = 2;
     private static final int ENERGY_NEXT_TURN = 1;
-    private static final int UPGRADED_DAMAGE = 1;
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("Strike_R");
 
     @SpirePatch(clz = Strike_Red.class, method = "upgrade")

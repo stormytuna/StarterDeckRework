@@ -23,7 +23,7 @@ public class FrenzyCard extends BaseCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int HP_LOSS = 2;
+    private static final int HP_LOSS = 3;
     private static final int STRENGTH_GAIN = 1;
     private static final int UPGRADED_STRENGTH_GAIN = 1;
 
