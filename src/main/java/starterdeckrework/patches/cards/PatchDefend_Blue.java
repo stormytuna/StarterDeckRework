@@ -56,5 +56,4 @@ public class PatchDefend_Blue {
             }
         }
     }
-
 }

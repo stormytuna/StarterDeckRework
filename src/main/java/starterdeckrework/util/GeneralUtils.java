@@ -1,8 +1,5 @@
 package starterdeckrework.util;
 
-import java.lang.reflect.Type;
-import java.util.ArrayList;
-
 public class GeneralUtils {
     public static String arrToString(Object[] arr) {
         if (arr == null)
@@ -16,15 +13,5 @@ public class GeneralUtils {
         }
         sb.append(arr[arr.length - 1]);
         return sb.toString();
-    }
-
-    public static ArrayList<String> swapAllInstances(ArrayList<String> arrayList, String a, String b) {
-        for (int i = 0; i < arrayList.size(); i++) {
-            if (arrayList.get(i) == a) {
-                arrayList.set(i, b);
-            }
-        }
-
-        return arrayList;
     }
 }
