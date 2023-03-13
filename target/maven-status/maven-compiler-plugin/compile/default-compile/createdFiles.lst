@@ -1,7 +1,9 @@
 starterdeckrework\patches\characters\PatchWatcher.class
+starterdeckrework\patches\cards\PatchStrike_Blue.class
 starterdeckrework\cards\PurpleDefendCard.class
 starterdeckrework\patches\cards\PatchStrike_Red$Strike_Red_PostfixUse.class
 starterdeckrework\patches\characters\PatchTheSilent$GetStartingDeckPatch.class
+starterdeckrework\patches\cards\PatchDefend_Blue$Defend_Blue_PrefixUpgrade.class
 starterdeckrework\cards\RedStrikeCard.class
 starterdeckrework\patches\localization\PatchCardStrings$LocalizedStrings_PostfixCtor.class
 starterdeckrework\util\GeneralUtils.class
@@ -11,6 +13,7 @@ starterdeckrework\util\TextureLoader.class
 starterdeckrework\patches\characters\PatchIronclad$GetStartingDeckPatch.class
 starterdeckrework\patches\cards\PatchDefend_Red.class
 starterdeckrework\patches\characters\PatchDefect.class
+starterdeckrework\patches\cards\PatchDefend_Blue.class
 starterdeckrework\patches\cards\PatchStrike_Green$Strike_Green_PostfixUpgrade.class
 starterdeckrework\patches\localization\PatchCardStrings.class
 starterdeckrework\cards\BlueDefendCard.class
@@ -21,6 +24,7 @@ starterdeckrework\StarterDeckRework.class
 starterdeckrework\patches\characters\PatchDefect$GetStartingDeckPatch.class
 starterdeckrework\patches\cards\PatchStrike_Red$Strike_Red_PrefixUpgrade.class
 starterdeckrework\patches\characters\PatchWatcher$GetStartingDeckPatch.class
+starterdeckrework\patches\cards\PatchDefend_Blue$Defend_Blue_PostfixUse.class
 starterdeckrework\patches\cards\PatchDefend_Green$Defend_Green_PrefixUpgrade.class
 starterdeckrework\util\KeywordInfo.class
 starterdeckrework\patches\cards\PatchDefend_Green$Defend_Green_AddTriggerOnManualDiscard.class
@@ -33,6 +37,7 @@ starterdeckrework\patches\cards\PatchStrike_Green$Strike_Green_PrefixUpgrade.cla
 starterdeckrework\relics\BaseRelic$1.class
 starterdeckrework\cards\PurpleStrikeCard.class
 starterdeckrework\patches\cards\PatchDefend_Green.class
+starterdeckrework\patches\cards\PatchStrike_Blue$Strike_Blue_PrefixUpgrade.class
 starterdeckrework\cards\BaseCard.class
 starterdeckrework\util\TextureLoader$1.class
 starterdeckrework\cards\GreenStrikeCard.class
