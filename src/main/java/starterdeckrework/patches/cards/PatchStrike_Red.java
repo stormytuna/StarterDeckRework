@@ -20,6 +20,8 @@ import java.lang.reflect.Method;
 
 public class PatchStrike_Red {
     private static final int ENERGY_NEXT_TURN = 1;
+    private static final int UPGRADED_DAMAGE = 1;
+
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("Strike_R");
 
     @SpirePatch(clz = Strike_Red.class, method = "upgrade")
@@ -36,7 +38,7 @@ public class PatchStrike_Red {
 
                 Method upgradeDamage = abstractCardClass.getDeclaredMethod("upgradeDamage", int.class);
                 upgradeDamage.setAccessible(true);
-                upgradeDamage.invoke(__instance, 1);
+                upgradeDamage.invoke(__instance, UPGRADED_DAMAGE);
 
                 __instance.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
                 __instance.initializeDescription();
