@@ -1,5 +1,6 @@
 starterdeckrework\patches\characters\PatchWatcher.class
 starterdeckrework\cards\PurpleDefendCard.class
+starterdeckrework\patches\cards\PatchStrike_Red$Strike_Red_PostfixUse.class
 starterdeckrework\patches\characters\PatchTheSilent$GetStartingDeckPatch.class
 starterdeckrework\cards\RedStrikeCard.class
 starterdeckrework\patches\localization\PatchCardStrings$LocalizedStrings_PostfixCtor.class
@@ -8,6 +9,7 @@ starterdeckrework\patches\characters\PatchIronclad.class
 starterdeckrework\util\CardInfo.class
 starterdeckrework\util\TextureLoader.class
 starterdeckrework\patches\characters\PatchIronclad$GetStartingDeckPatch.class
+starterdeckrework\patches\cards\PatchDefend_Red.class
 starterdeckrework\patches\characters\PatchDefect.class
 starterdeckrework\patches\localization\PatchCardStrings.class
 starterdeckrework\cards\BlueDefendCard.class
@@ -28,6 +30,7 @@ starterdeckrework\cards\PurpleStrikeCard.class
 starterdeckrework\cards\BaseCard.class
 starterdeckrework\util\TextureLoader$1.class
 starterdeckrework\cards\GreenStrikeCard.class
-starterdeckrework\patches\cards\PatchStrike_Red$Strike_Red_PostUse.class
+starterdeckrework\patches\cards\PatchDefend_Red$Defend_Red_PrefixUpgrade.class
+starterdeckrework\patches\cards\PatchDefend_Red$Defend_Red_PrefixUse.class
 starterdeckrework\patches\cards\PatchStrike_Red.class
 starterdeckrework\relics\BaseRelic.class

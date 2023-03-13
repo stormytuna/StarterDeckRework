@@ -8,7 +8,7 @@
     "DESCRIPTION": "Deal !D! damage.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Next turn, gain [E]."
   },
-  "StarterDeckRework:RedDefend": {
+  "StarterDeckRework:Defend_R": {
     "NAME": "Defend",
     "DESCRIPTION": "Gain !B! Block.",
     "UPGRADE_DESCRIPTION": "Gain !B! Block for each enemy in combat."
