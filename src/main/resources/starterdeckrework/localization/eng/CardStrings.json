@@ -13,7 +13,7 @@
     "DESCRIPTION": "Gain !B! Block.",
     "UPGRADE_DESCRIPTION": "Gain !B! Block for each enemy in combat."
   },
-  "${modID}:GreenStrike": {
+  "${modID}:Strike_G": {
     "NAME": "Strike",
     "DESCRIPTION": "Deal !D! damage",
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Next turn, draw 1 additional card."

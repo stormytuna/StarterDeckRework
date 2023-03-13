@@ -11,6 +11,7 @@ starterdeckrework\util\TextureLoader.class
 starterdeckrework\patches\characters\PatchIronclad$GetStartingDeckPatch.class
 starterdeckrework\patches\cards\PatchDefend_Red.class
 starterdeckrework\patches\characters\PatchDefect.class
+starterdeckrework\patches\cards\PatchStrike_Green$Strike_Green_PostfixUpgrade.class
 starterdeckrework\patches\localization\PatchCardStrings.class
 starterdeckrework\cards\BlueDefendCard.class
 starterdeckrework\cards\BlueStrikeCard.class
@@ -22,9 +23,11 @@ starterdeckrework\patches\cards\PatchStrike_Red$Strike_Red_PrefixUpgrade.class
 starterdeckrework\patches\characters\PatchWatcher$GetStartingDeckPatch.class
 starterdeckrework\util\KeywordInfo.class
 starterdeckrework\cards\RedDefendCard.class
+starterdeckrework\patches\cards\PatchStrike_Green.class
 starterdeckrework\cards\GreenDefendCard.class
 starterdeckrework\patches\characters\PatchTheSilent.class
 starterdeckrework\powers\BasePower.class
+starterdeckrework\patches\cards\PatchStrike_Green$Strike_Green_PrefixUpgrade.class
 starterdeckrework\relics\BaseRelic$1.class
 starterdeckrework\cards\PurpleStrikeCard.class
 starterdeckrework\cards\BaseCard.class
