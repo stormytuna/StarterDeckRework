@@ -43,7 +43,7 @@ public class PatchStrike_Red {
                 __instance.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
                 __instance.initializeDescription();
 
-                SpireReturn.Return(null);
+                return SpireReturn.Return(null);
             }
 
             return SpireReturn.Continue();
