@@ -23,10 +23,10 @@
     <!-- Avoid using \ in this description, as they can cause the description to fail to load. -->
     <!-- If you really want to use them, you'll need to "escape" them by putting another one in front, like \\ -->
     <description>
-        Starter Deck Rework reworks the starter deck of each vanilla character, making them more balanced and unique.\n
+        Starter Deck Rework reworks the starter deck of each vanilla character, making them more balanced and unique.\n\n
         Each vanilla character's Strike and Defend has a unique upgrade that fits one of their gimmicks.\n
         Ironclad has a Strike replaced with a new card, Frenzy - Lose 2 HP. Gain 1(+1) Strength.\n
-        And finally, The Silent has 1 Strike and 1 Defend removes to make her 4/4/1/1.
+        The Silent has 1 Strike and 1 Defend removes to make her 4/4/1/1.
     </description>
 
     <!--You shouldn't need to change anything below this point, but feel free to look at it.-->
