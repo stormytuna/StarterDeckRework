@@ -28,12 +28,12 @@
     "DESCRIPTION": "Gain !B! Block.",
     "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Draw 1 card."
   },
-  "${modID}:PurpleStrike": {
+  "${modID}:Strike_P": {
     "NAME": "Strike",
     "DESCRIPTION": "Deal !D! damage.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain 2 Mantra."
   },
-  "${modID}:PurpleDefend": {
+  "${modID}:Defend_P": {
     "NAME": "Defend",
     "DESCRIPTION": "Gain !B! Block.",
     "UPGRADE_DESCRIPTION": "Retain. NL Gain !B! Block."

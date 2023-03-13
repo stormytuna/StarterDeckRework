@@ -1,4 +1,5 @@
 starterdeckrework\patches\characters\PatchWatcher.class
+starterdeckrework\patches\cards\PatchStrike_Purple.class
 starterdeckrework\patches\cards\PatchStrike_Blue.class
 starterdeckrework\cards\PurpleDefendCard.class
 starterdeckrework\patches\cards\PatchStrike_Red$Strike_Red_PostfixUse.class
@@ -18,6 +19,7 @@ starterdeckrework\patches\cards\PatchStrike_Green$Strike_Green_PostfixUpgrade.cl
 starterdeckrework\patches\localization\PatchCardStrings.class
 starterdeckrework\cards\BlueDefendCard.class
 starterdeckrework\cards\BlueStrikeCard.class
+starterdeckrework\patches\cards\PatchDefend_Purple.class
 starterdeckrework\cards\FrenzyCard.class
 starterdeckrework\patches\localization\PatchCardStrings$LocalizedStrings_PrefixGetCardStrings.class
 starterdeckrework\StarterDeckRework.class
@@ -25,12 +27,15 @@ starterdeckrework\patches\characters\PatchDefect$GetStartingDeckPatch.class
 starterdeckrework\patches\cards\PatchStrike_Red$Strike_Red_PrefixUpgrade.class
 starterdeckrework\patches\characters\PatchWatcher$GetStartingDeckPatch.class
 starterdeckrework\patches\cards\PatchDefend_Blue$Defend_Blue_PostfixUse.class
+starterdeckrework\patches\cards\PatchStrike_Purple$Strike_Purple_PrefixUpgrade.class
 starterdeckrework\patches\cards\PatchDefend_Green$Defend_Green_PrefixUpgrade.class
+starterdeckrework\patches\cards\PatchDefend_Purple$Defend_Purple_PrefixUpgrade.class
 starterdeckrework\util\KeywordInfo.class
 starterdeckrework\patches\cards\PatchDefend_Green$Defend_Green_AddTriggerOnManualDiscard.class
 starterdeckrework\cards\RedDefendCard.class
 starterdeckrework\patches\cards\PatchStrike_Green.class
 starterdeckrework\cards\GreenDefendCard.class
+starterdeckrework\patches\cards\PatchStrike_Purple$Strike_Purple_PostfixUpgrade.class
 starterdeckrework\patches\characters\PatchTheSilent.class
 starterdeckrework\powers\BasePower.class
 starterdeckrework\patches\cards\PatchStrike_Green$Strike_Green_PrefixUpgrade.class
