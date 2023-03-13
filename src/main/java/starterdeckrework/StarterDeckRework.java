@@ -1,13 +1,16 @@
 package starterdeckrework;
 
+import basemod.AutoAdd;
 import basemod.BaseMod;
 import basemod.ModLabeledToggleButton;
 import basemod.ModPanel;
+import basemod.interfaces.EditCardsSubscriber;
 import basemod.interfaces.EditStringsSubscriber;
 import basemod.interfaces.PostInitializeSubscriber;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.helpers.FontHelper;
+import starterdeckrework.cards.BaseCard;
 import starterdeckrework.util.GeneralUtils;
 import starterdeckrework.util.TextureLoader;
 import com.badlogic.gdx.graphics.Texture;
@@ -26,6 +29,7 @@ import java.util.*;
 
 @SpireInitializer
 public class StarterDeckRework implements
+        EditCardsSubscriber,
         EditStringsSubscriber,
         PostInitializeSubscriber {
     public static ModInfo info;
@@ -92,6 +96,14 @@ public class StarterDeckRework implements
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    @Override
+    public void receiveEditCards() {
+        new AutoAdd(modID)
+                .packageFilter(BaseCard.class)
+                .setDefaultSeen(true)
+                .cards();
     }
 
     @Override

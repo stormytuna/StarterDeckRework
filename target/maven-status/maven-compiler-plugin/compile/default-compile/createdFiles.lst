@@ -13,6 +13,7 @@ starterdeckrework\patches\cards\PatchStrike_Green.class
 starterdeckrework\util\GeneralUtils.class
 starterdeckrework\patches\characters\PatchIronclad.class
 starterdeckrework\patches\cards\PatchStrike_Purple$Strike_Purple_PostfixUpgrade.class
+starterdeckrework\util\CardInfo.class
 starterdeckrework\patches\characters\PatchTheSilent.class
 starterdeckrework\util\TextureLoader.class
 starterdeckrework\patches\characters\PatchIronclad$GetStartingDeckPatch.class
@@ -24,6 +25,8 @@ starterdeckrework\patches\cards\PatchStrike_Green$Strike_Green_PostfixUpgrade.cl
 starterdeckrework\patches\localization\PatchCardStrings.class
 starterdeckrework\patches\cards\PatchStrike_Blue$Strike_Blue_PrefixUpgrade.class
 starterdeckrework\patches\cards\PatchDefend_Purple.class
+starterdeckrework\cards\BaseCard.class
+starterdeckrework\cards\FrenzyCard.class
 starterdeckrework\patches\localization\PatchCardStrings$LocalizedStrings_PrefixGetCardStrings.class
 starterdeckrework\StarterDeckRework.class
 starterdeckrework\util\TextureLoader$1.class
