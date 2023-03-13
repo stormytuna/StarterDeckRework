@@ -51,7 +51,7 @@ public class PatchDefend_Blue {
     public static class Defend_Blue_PostfixUse {
         @SpirePostfixPatch
         public static void patch(Defend_Blue __instance, AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-            if (__instance.upgraded) {
+            if (StarterDeckRework.swapDefectDefends && __instance.upgraded) {
                 AbstractDungeon.actionManager.addToBottom(new DrawCardAction(abstractPlayer, DRAW_AMOUNT));
             }
         }

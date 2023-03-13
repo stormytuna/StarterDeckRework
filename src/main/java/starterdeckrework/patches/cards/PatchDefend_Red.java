@@ -44,7 +44,7 @@ public class PatchDefend_Red {
     public static class Defend_Red_PrefixUse {
         @SpirePrefixPatch
         public static SpireReturn patch(Defend_Red __instance, AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-            if (__instance.upgraded) {
+            if (StarterDeckRework.swapIroncladDefends && __instance.upgraded) {
                 int aliveMonstersCount = 0;
                 for (AbstractMonster monster : (AbstractDungeon.getCurrRoom()).monsters.monsters) {
                     if (!monster.isDeadOrEscaped()) {

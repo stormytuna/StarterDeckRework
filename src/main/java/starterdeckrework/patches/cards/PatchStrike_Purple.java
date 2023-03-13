@@ -52,7 +52,7 @@ public class PatchStrike_Purple {
     public static class Strike_Purple_PostfixUpgrade {
         @SpirePostfixPatch
         public static void patch(Strike_Purple __instance, AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-            if (__instance.upgraded) {
+            if (StarterDeckRework.swapWatcherStrikes && __instance.upgraded) {
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer, new MantraPower(abstractPlayer, MANTRA_INCREASE)));
             }
         }

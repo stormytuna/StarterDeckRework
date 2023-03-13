@@ -54,7 +54,7 @@ public class PatchStrike_Red {
     public static class Strike_Red_PostfixUse {
         @SpirePostfixPatch
         public static void patch(Strike_Red __instance, AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-            if (__instance.upgraded) {
+            if (StarterDeckRework.swapIroncladStrikes && __instance.upgraded) {
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer, new EnergizedBluePower(abstractPlayer, ENERGY_NEXT_TURN)));
             }
         }

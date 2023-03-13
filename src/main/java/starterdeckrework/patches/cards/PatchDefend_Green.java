@@ -45,7 +45,7 @@ public class PatchDefend_Green {
         @SpireRawPatch
         public static void raw(CtBehavior ctMethodToPatch) throws CannotCompileException {
             CtClass ctClass = ctMethodToPatch.getDeclaringClass();
-            CtMethod triggerOnManualDiscard = CtNewMethod.make(CtClass.voidType, "triggerOnManualDiscard", new CtClass[] {  }, null, "{ if (this.upgraded) { com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.GainBlockAction(com.megacrit.cardcrawl.dungeons.AbstractDungeon.player, com.megacrit.cardcrawl.dungeons.AbstractDungeon.player, this.block)); } }", ctClass);
+            CtMethod triggerOnManualDiscard = CtNewMethod.make(CtClass.voidType, "triggerOnManualDiscard", new CtClass[] {  }, null, "{ if (starterdeckrework.StarterDeckRework.swapSilentDefends && this.upgraded) { com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.GainBlockAction(com.megacrit.cardcrawl.dungeons.AbstractDungeon.player, com.megacrit.cardcrawl.dungeons.AbstractDungeon.player, this.block)); } }", ctClass);
             ctClass.addMethod(triggerOnManualDiscard);
         }
     }
