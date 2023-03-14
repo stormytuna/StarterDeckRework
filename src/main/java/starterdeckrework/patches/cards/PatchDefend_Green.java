@@ -42,11 +42,18 @@ public class PatchDefend_Green {
 
     @SpirePatch(clz = Defend_Green.class, method = "<ctor>")
     public static class Defend_Green_AddTriggerOnManualDiscard {
+        private static final String triggerOnManualDiscardBody = "{ if (starterdeckrework.StarterDeckRework.swapSilentDefends && this.upgraded) { com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.GainBlockAction(com.megacrit.cardcrawl.dungeons.AbstractDungeon.player, com.megacrit.cardcrawl.dungeons.AbstractDungeon.player, this.block)); } }";
         @SpireRawPatch
-        public static void raw(CtBehavior ctMethodToPatch) throws CannotCompileException {
-            CtClass ctClass = ctMethodToPatch.getDeclaringClass();
-            CtMethod triggerOnManualDiscard = CtNewMethod.make(CtClass.voidType, "triggerOnManualDiscard", new CtClass[] {  }, null, "{ if (starterdeckrework.StarterDeckRework.swapSilentDefends && this.upgraded) { com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.GainBlockAction(com.megacrit.cardcrawl.dungeons.AbstractDungeon.player, com.megacrit.cardcrawl.dungeons.AbstractDungeon.player, this.block)); } }", ctClass);
-            ctClass.addMethod(triggerOnManualDiscard);
+        public static void raw(CtBehavior ctMethodToPatch) throws CannotCompileException, NotFoundException {
+            try {
+                CtClass ctClass = ctMethodToPatch.getDeclaringClass();
+                CtMethod triggerOnManualDiscard = CtNewMethod.make(CtClass.voidType, "triggerOnManualDiscard", new CtClass[] {  }, null, triggerOnManualDiscardBody, ctClass);
+                ctClass.addMethod(triggerOnManualDiscard);
+            } catch (Exception e) {
+                CtClass ctClass = ctMethodToPatch.getDeclaringClass();
+                CtMethod triggerOnManualDiscard = ctClass.getDeclaredMethod("triggerOnManualDiscard");
+                triggerOnManualDiscard.insertAfter(triggerOnManualDiscardBody);
+            }
         }
     }
 }
