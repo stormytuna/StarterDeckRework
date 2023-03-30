@@ -17,7 +17,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 public class PatchDefend_Blue {
-    private static final int UPGRADED_BLOCK = 2;
+    private static final int UPGRADED_BLOCK = 1;
     private static final int DRAW_AMOUNT = 1;
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("Defend_B");
 

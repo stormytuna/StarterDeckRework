@@ -11,7 +11,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 public class PatchDefend_Green {
-    private static final int UPGRADED_BLOCK = 2;
+    private static final int UPGRADED_BLOCK = 1;
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("Defend_G");
 
     @SpirePatch(clz = Defend_Green.class, method = "upgrade")

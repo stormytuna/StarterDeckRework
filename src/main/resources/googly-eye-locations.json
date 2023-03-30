@@ -1,0 +1,24 @@
+{
+  "cards": {
+    "StarterDeckRework:Frenzy": [
+      {
+        "x": 187.75003,
+        "y": 113.25,
+        "size": 40.61096
+      },
+      {
+        "x": 297.25003,
+        "y": 112.5,
+        "size": 40.45136
+      }
+    ]
+  },
+  "betaCards": {},
+  "relics": {},
+  "events": {},
+  "charSelect": {},
+  "creatures": {},
+  "creaturesStatic": {},
+  "orbs": {},
+  "potions": {}
+}

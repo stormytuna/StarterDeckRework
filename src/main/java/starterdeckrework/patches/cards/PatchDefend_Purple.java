@@ -17,7 +17,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 public class PatchDefend_Purple {
-    private static final int UPGRADED_BLOCK = 2;
+    private static final int UPGRADED_BLOCK = 1;
     private static final int SCRY_AMOUNT = 2;
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("Defend_P");
 
@@ -36,8 +36,6 @@ public class PatchDefend_Purple {
                 Method upgradeBlock = abstractCardClass.getDeclaredMethod("upgradeBlock", int.class);
                 upgradeBlock.setAccessible(true);
                 upgradeBlock.invoke(__instance, UPGRADED_BLOCK);
-
-                __instance.selfRetain = true;
 
                 __instance.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
                 __instance.initializeDescription();
