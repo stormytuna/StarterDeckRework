@@ -16,7 +16,8 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 public class PatchDefend_Red {
-    private static final int UPGRADED_BLOCK = 1;
+    private static final int UPGRADED_BLOCK = 0;
+    private static final int UPGRADED_MAGIC = 2;
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("Defend_R");
 
     @SpirePatch(clz = Defend_Red.class, method = "upgrade")
@@ -34,6 +35,10 @@ public class PatchDefend_Red {
                 Method upgradeBlock = abstractCardClass.getDeclaredMethod("upgradeBlock", int.class);
                 upgradeBlock.setAccessible(true);
                 upgradeBlock.invoke(__instance, UPGRADED_BLOCK);
+
+                Method upgradeMagicNumber = abstractCardClass.getDeclaredMethod("upgradeMagicNumber", int.class);
+                upgradeMagicNumber.setAccessible(true);
+                upgradeMagicNumber.invoke(__instance, UPGRADED_MAGIC + 1);
 
                 __instance.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
                 __instance.initializeDescription();
@@ -57,11 +62,13 @@ public class PatchDefend_Red {
                     }
                 }
 
-                int numTimesToGainBlock = __instance.upgraded ? aliveMonstersCount : 1;
+                int numTimesToGainBlock = aliveMonstersCount;
 
                 for (int i = 0; i < numTimesToGainBlock; i++) {
-                    AbstractDungeon.actionManager.addToBottom(new GainBlockAction(abstractPlayer, abstractPlayer, __instance.block));
+                    AbstractDungeon.actionManager.addToBottom(new GainBlockAction(abstractPlayer, abstractPlayer, __instance.magicNumber));
                 }
+
+                    AbstractDungeon.actionManager.addToBottom(new GainBlockAction(abstractPlayer, abstractPlayer, __instance.block));
 
                 return SpireReturn.Return(null);
             }

@@ -7,8 +7,6 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePrefixPatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.localization.LocalizedStrings;
-import com.megacrit.cardcrawl.localization.RelicStrings;
-import javafx.scene.effect.Reflection;
 import starterdeckrework.StarterDeckRework;
 
 import java.util.Map;
