@@ -36,7 +36,7 @@ public class FrenzyCard extends BaseCard {
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         addToBot(new LoseHPAction(abstractPlayer, abstractPlayer, HP_LOSS));
-        addToBot(new ApplyPowerAction(abstractPlayer, abstractPlayer, new StrengthPower(abstractPlayer, this.magicNumber), 1, AbstractGameAction.AttackEffect.FIRE));
+        addToBot(new ApplyPowerAction(abstractPlayer, abstractPlayer, new StrengthPower(abstractPlayer, this.magicNumber), this.magicNumber, AbstractGameAction.AttackEffect.FIRE));
     }
 
     @Override
