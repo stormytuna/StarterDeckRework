@@ -31,7 +31,7 @@
   "${modID}:Strike_P": {
     "NAME": "Strike",
     "DESCRIPTION": "Deal !D! damage.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain 2 Mantra."
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Shuffle an *Insight into your draw pile."
   },
   "${modID}:Defend_P": {
     "NAME": "Defend",

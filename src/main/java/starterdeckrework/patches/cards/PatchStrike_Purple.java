@@ -5,7 +5,10 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePrefixPatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.purple.Strike_Purple;
+import com.megacrit.cardcrawl.cards.tempCards.Insight;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -19,7 +22,6 @@ import java.lang.reflect.Method;
 
 public class PatchStrike_Purple {
     private static final int UPGRADED_DAMAGE = 2;
-    private static final int MANTRA_INCREASE = 2;
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("Strike_P");
 
     @SpirePatch(clz = Strike_Purple.class, method = "upgrade")
@@ -53,7 +55,7 @@ public class PatchStrike_Purple {
         @SpirePostfixPatch
         public static void patch(Strike_Purple __instance, AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
             if (StarterDeckRework.swapWatcherStrikes && __instance.upgraded) {
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer, new MantraPower(abstractPlayer, MANTRA_INCREASE)));
+                AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(new Insight(), 1, true, true, false));
             }
         }
     }
