@@ -1,6 +1,5 @@
 package starterdeckrework.patches.cards;
 
-import basemod.ReflectionHacks;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePrefixPatch;
@@ -19,7 +18,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 public class PatchStrike_Red {
-    private static final int UPGRADED_DAMAGE = 2;
+    private static final int UPGRADED_DAMAGE = 1;
     private static final int ENERGY_NEXT_TURN = 1;
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("Strike_R");
 
