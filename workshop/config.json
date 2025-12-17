@@ -1,0 +1,11 @@
+{
+  "steamPublishedID": "3625304566",
+  "title": "Starter Deck Rework",
+  "description": "Reworks the starter deck of each character to make them more unique.\n\n[hr][/hr]\n\n[b]Changes[/b]\n[list]\n[*]Strikes and Defends have a unique upgrade that fits one of their gimmicks.\n[*]Ironclad has a Strike replaced with a new card, Frenzy - Lose 3 HP. Gain 1(+1) Strength.\n[*]The Silent has 1 Strike and 1 Defend removed to make her 4/4/1/1.\n[/list]\n\nEverything is configurable.\n\n[hr][/hr]\n\nSource code: https://github.com/stormytuna/StarterDeckRework\n\nIf you enjoy my work, [url\u003dhttps://ko-fi.com/stormytuna]please consider donating[/url]",
+  "visibility": "private",
+  "changeNote": "v1.2\n\n- Fix Frenzy+ not applying correct amount of Strength if it was stacking on existing Strength.\n- Nerf Ironclad Strike+ from 8 damage to 7.\n- Tweak Ironclad Defend+ to grant a flat amount of block plus a bonus for each enemy in combat.\n- Change Watcher Strike+ to shuffle an Insight into draw pile.\n- Change Watcher Defend+ to Scry 2 and Draw 1 if your last played card was a Skill.",
+  "tags": [
+    "Cards",
+    "Qol"
+  ]
+}
