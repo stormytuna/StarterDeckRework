@@ -7,6 +7,10 @@
     "NAME": "Slime Shield",
     "DESCRIPTION": "Gain !B! Block. NL Add a *Slimed to your hand."
   },
+  "${modID}:Analyze": {
+    "NAME": "Analyze",
+    "DESCRIPTION": "Apply !M! Vulnerable to ALL enemies. NL Exhaust."
+  },
   "${modID}:Strike_R": {
     "NAME": "Strike",
     "DESCRIPTION": "Deal !D! damage.",
