@@ -3,6 +3,10 @@
     "NAME": "Frenzy",
     "DESCRIPTION": "Lose 3 HP. NL Gain !M! Strength."
   },
+  "${modID}:SlimeShield": {
+    "NAME": "Slime Shield",
+    "DESCRIPTION": "Gain !B! Block. NL Add a *Slimed to your hand."
+  },
   "${modID}:Strike_R": {
     "NAME": "Strike",
     "DESCRIPTION": "Deal !D! damage.",
