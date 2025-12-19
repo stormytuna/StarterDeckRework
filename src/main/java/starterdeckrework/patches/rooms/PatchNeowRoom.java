@@ -80,19 +80,18 @@ public class PatchNeowRoom {
 				previouslyChosenCards = cards;
 			}
 
-			UIStrings chooseStartingCards = CardCrawlGame.languagePack.getUIString(StarterDeckRework.makeID("ChooseStartingCards"));
-			BaseMod.openCustomGridScreen(previouslyChosenCards, 2, chooseStartingCards.TEXT[0], x -> {
-				if (x.isEmpty()) {
+			if (previouslyChosenCards.size() > 2) {
+				UIStrings chooseStartingCards = CardCrawlGame.languagePack.getUIString(StarterDeckRework.makeID("ChooseStartingCards"));
+				BaseMod.openCustomGridScreen(previouslyChosenCards, 2, chooseStartingCards.TEXT[0], cards -> {
+				  if (cards.size() != 2) {
 					return;
-				}
+				  }
 
-				for (AbstractCard card : x) {
-					AbstractDungeon.player.masterDeck.addToTop(card);
-				}
-
-				shownCards = true;
-				SaveHelper.saveIfAppropriate(SaveType.ENTER_ROOM);
-			});
+				  addChosenCardsToDeck(cards);
+				});
+			} else {
+				addChosenCardsToDeck(previouslyChosenCards.group);
+			}
 
 			if (AbstractDungeon.player.chosenClass == PlayerClass.IRONCLAD) {
 				if (StarterDeckRework.swapIroncladStrikeForFrenzy) {
@@ -113,6 +112,15 @@ public class PatchNeowRoom {
 				AbstractDungeon.player.masterDeck.removeCard("Vigilance");
 			}
         }
+
+		private static void addChosenCardsToDeck(ArrayList<AbstractCard> cards) {
+			for (AbstractCard card : cards) {
+				AbstractDungeon.player.masterDeck.addToTop(card);
+			}
+
+			shownCards = true;
+			SaveHelper.saveIfAppropriate(SaveType.ENTER_ROOM);
+		}
     }
 
 	@SpirePatch(clz = AbstractDungeon.class, method = SpirePatch.CONSTRUCTOR, paramtypez={
