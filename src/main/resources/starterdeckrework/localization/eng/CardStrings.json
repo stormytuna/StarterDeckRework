@@ -44,6 +44,11 @@
     "NAME": "Flagellate",
     "DESCRIPTION": "Deal !D! damage. NL Gain 4 Mantra if you take unlocked damage this turn."
   },
+  "${modID}:CollapseReality": {
+    "NAME": "Collapse Reality",
+    "DESCRIPTION": "If you are in *Wrath, add a *Smite to your hand. NL If you are in *Calm, add a *Safety to your hand. NL Otherwise, add a *Miracle to your hand.",
+    "UPGRADE_DESCRIPTION": "If you are in *Wrath, add a *Smite+ to your hand. NL If you are in *Calm, add a *Safety+ to your hand. NL Otherwise, add a *Miracle+ to your hand."
+  },
   "${modID}:Strike_R": {
     "NAME": "Strike",
     "DESCRIPTION": "Deal !D! damage.",
