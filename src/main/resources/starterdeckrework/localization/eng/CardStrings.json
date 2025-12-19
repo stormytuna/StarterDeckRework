@@ -15,6 +15,11 @@
     "NAME": "Blood Barrier",
     "DESCRIPTION": "Ethereal. NL At the end of your turn, lose 1 HP and gain !B! Block."
   },
+  "${modID}:HiddenBlade": {
+    "NAME": "Hidden Blade",
+    "DESCRIPTION": "Draw 2 cards. NL Add !M! shiv into your hand.",
+    "UPGRADE_DESCRIPTION": "Draw 2 cards. NL Add !M! shivs into your hand."
+  },
   "${modID}:Strike_R": {
     "NAME": "Strike",
     "DESCRIPTION": "Deal !D! damage.",
