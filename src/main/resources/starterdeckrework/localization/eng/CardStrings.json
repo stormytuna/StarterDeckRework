@@ -36,6 +36,10 @@
     "NAME": "Dry Run",
     "DESCRIPTION": "Your first attack each turn deals !M! additional damage."
   },
+  "${modID}:DefensiveProtocols": {
+    "NAME": "Defensive Protocols",
+    "DESCRIPTION": "Gain !B! Block. NL Apply !M! *Lock-On to ALL enemies."
+  },
   "${modID}:Strike_R": {
     "NAME": "Strike",
     "DESCRIPTION": "Deal !D! damage.",
