@@ -2,7 +2,9 @@ package starterdeckrework;
 
 import basemod.AutoAdd;
 import basemod.BaseMod;
+import basemod.ModLabel;
 import basemod.ModLabeledToggleButton;
+import basemod.ModMinMaxSlider;
 import basemod.ModPanel;
 import basemod.interfaces.EditCardsSubscriber;
 import basemod.interfaces.EditStringsSubscriber;
@@ -52,6 +54,7 @@ public class StarterDeckRework implements
     public static boolean swapWatcherStrikes = false;
     public static boolean swapWatcherDefends = false;
     public static boolean newStartingCards = false;
+    public static int startingCardChoices = 0;
 
     //This is used to prefix the IDs of various objects like cards and relics,
     //to avoid conflicts between different mods using the same name for things.
@@ -79,6 +82,7 @@ public class StarterDeckRework implements
         defaultSettings.setProperty("swap-watcher-strikes", Boolean.toString(true));
         defaultSettings.setProperty("swap-watcher-defends", Boolean.toString(true));
         defaultSettings.setProperty("new-starting-cards", Boolean.toString(true));
+        defaultSettings.setProperty("starting-card-choices", "3");
 
         try {
             SpireConfig config = new SpireConfig("starterdeckrework", "StarterDeckReworkConfig", defaultSettings);
@@ -95,6 +99,7 @@ public class StarterDeckRework implements
             swapWatcherStrikes = config.getBool("swap-watcher-strikes");
             swapWatcherDefends = config.getBool("swap-watcher-defends");
             newStartingCards = config.getBool("new-starting-cards");
+            startingCardChoices = config.getInt("starting-card-choices");
 
             logger.info(modID + " added mod settings");
         } catch (Exception e) {
@@ -225,6 +230,19 @@ public class StarterDeckRework implements
             }
         });
 
+        // Built in ModMinMaxSlider label was overlapping with slider, so separated them
+        ModLabel startingCardChoicesSliderLabel = new ModLabel(configStrings.TEXT[11], 350.0F, 210.0F, Settings.CREAM_COLOR, FontHelper.charDescFont, settingsPanel, label -> {});
+        ModMinMaxSlider startingCardChoicesSlider = new ModMinMaxSlider("", 960.0F, 220.0F, 2, 5, startingCardChoices, "%.0f", settingsPanel, slider -> {
+            try {
+                SpireConfig config = new SpireConfig("starterdeckrework", "StarterDeckReworkConfig", defaultSettings);
+                startingCardChoices = Math.round(slider.getValue());
+                config.setInt("starting-card-choices", startingCardChoices);
+                config.save();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
+
         settingsPanel.addUIElement(enableSwapIroncladStrikesButton);
         settingsPanel.addUIElement(enableSwapIroncladDefendsButton);
         settingsPanel.addUIElement(enableSwapIroncladStrikeForFrenzyButton);
@@ -236,6 +254,8 @@ public class StarterDeckRework implements
         settingsPanel.addUIElement(enableSwapWatcherStrikesButton);
         settingsPanel.addUIElement(enableSwapWatcherDefendsButton);
         settingsPanel.addUIElement(enableNewStartingCardsButton);
+        settingsPanel.addUIElement(startingCardChoicesSliderLabel);
+        settingsPanel.addUIElement(startingCardChoicesSlider);
 
         Texture badgeTexture = TextureLoader.getTexture(resourcePath("badge.png"));
         BaseMod.registerModBadge(badgeTexture, info.Name, GeneralUtils.arrToString(info.Authors), info.Description, settingsPanel);

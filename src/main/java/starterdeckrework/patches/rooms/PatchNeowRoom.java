@@ -22,6 +22,7 @@ import com.megacrit.cardcrawl.dungeons.Exordium;
 import com.megacrit.cardcrawl.helpers.SaveHelper;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.neow.NeowRoom;
+import com.megacrit.cardcrawl.random.Random;
 import com.megacrit.cardcrawl.saveAndContinue.SaveFile.SaveType;
 
 import basemod.BaseMod;
@@ -32,6 +33,7 @@ public class PatchNeowRoom {
     @SpirePatch(clz = NeowRoom.class, method = "update")
     public static class ChooseStartingCardsPatch {
 		public static Boolean shownCards = true;
+		public static CardGroup previouslyChosenCards = null;
 
         @SpirePostfixPatch
         public static void patch(NeowRoom __instance) {
@@ -39,37 +41,47 @@ public class PatchNeowRoom {
 			  return;
 			}
 
-
-			CardGroup cards = new CardGroup(CardGroupType.UNSPECIFIED); 
+			ArrayList<AbstractCard> allCards = new ArrayList<AbstractCard>(); 
 
 			if (AbstractDungeon.player.chosenClass == PlayerClass.IRONCLAD) {
-				cards.addToTop(new Analyze());
-				cards.addToTop(new Bash());
-				cards.addToTop(new BloodBarrier());
-				cards.addToTop(new FrenzyCard());
-				cards.addToTop(new SlimeShield());
+				allCards.add(new Analyze());
+				allCards.add(new Bash());
+				allCards.add(new BloodBarrier());
+				allCards.add(new FrenzyCard());
+				allCards.add(new SlimeShield());
 			} else if (AbstractDungeon.player.chosenClass == PlayerClass.THE_SILENT) {
-				cards.addToTop(new HeelKick());
-				cards.addToTop(new HiddenBlade());
-				cards.addToTop(new Neutralize());
-				cards.addToTop(new Survivor());
-				cards.addToTop(new TearGas());
+				allCards.add(new HeelKick());
+				allCards.add(new HiddenBlade());
+				allCards.add(new Neutralize());
+				allCards.add(new Survivor());
+				allCards.add(new TearGas());
 			} else if (AbstractDungeon.player.chosenClass == PlayerClass.DEFECT) {
-				cards.addToTop(new DarkWeb());
-				cards.addToTop(new DefensiveProtocols());
-				cards.addToTop(new DryRun());
-				cards.addToTop(new Dualcast());
-				cards.addToTop(new Zap());
+				allCards.add(new DarkWeb());
+				allCards.add(new DefensiveProtocols());
+				allCards.add(new DryRun());
+				allCards.add(new Dualcast());
+				allCards.add(new Zap());
 			} else if (AbstractDungeon.player.chosenClass == PlayerClass.WATCHER) {
-				cards.addToTop(new CollapseReality());
-				cards.addToTop(new Eruption());
-				cards.addToTop(new Flagellate());
-				cards.addToTop(new Premonition());
-				cards.addToTop(new Vigilance());
+				allCards.add(new CollapseReality());
+				allCards.add(new Eruption());
+				allCards.add(new Flagellate());
+				allCards.add(new Premonition());
+				allCards.add(new Vigilance());
+			}
+
+			if (previouslyChosenCards == null) {
+				CardGroup cards = new CardGroup(CardGroupType.UNSPECIFIED);
+				for (int i = 0; i < StarterDeckRework.startingCardChoices; i++) {
+				  int nextCardIndex = AbstractDungeon.cardRandomRng.random(0, allCards.size() - 1);
+				  AbstractCard nextCard = allCards.remove(nextCardIndex);
+				  cards.addToTop(nextCard);
+				}
+
+				previouslyChosenCards = cards;
 			}
 
 			UIStrings chooseStartingCards = CardCrawlGame.languagePack.getUIString(StarterDeckRework.makeID("ChooseStartingCards"));
-			BaseMod.openCustomGridScreen(cards, 2, chooseStartingCards.TEXT[0], x -> {
+			BaseMod.openCustomGridScreen(previouslyChosenCards, 2, chooseStartingCards.TEXT[0], x -> {
 				if (x.isEmpty()) {
 					return;
 				}
@@ -114,6 +126,7 @@ public class PatchNeowRoom {
 		public static void patch(AbstractDungeon __instance, String name, String levelId, AbstractPlayer p, ArrayList<String> newSpecialOneTimeEventList) {
 			if (levelId.equals(Exordium.ID) && AbstractDungeon.floorNum == 0) {
 				ChooseStartingCardsPatch.shownCards = false;
+				ChooseStartingCardsPatch.previouslyChosenCards = null;
 			}
 		}
 	}
