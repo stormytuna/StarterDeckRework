@@ -1,0 +1,10 @@
+{
+  "${modID}:BloodBarrier": {
+    "NAME": "Blood Barrier",
+    "DESCRIPTIONS": [
+      "At the end of  your turn, lose #b",
+      " HP and gain #b",
+      " Block."
+    ]
+  }
+}

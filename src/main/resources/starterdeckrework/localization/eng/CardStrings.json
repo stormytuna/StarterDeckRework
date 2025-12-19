@@ -11,6 +11,10 @@
     "NAME": "Analyze",
     "DESCRIPTION": "Apply !M! Vulnerable to ALL enemies. NL Exhaust."
   },
+  "${modID}:BloodBarrier": {
+    "NAME": "Blood Barrier",
+    "DESCRIPTION": "Ethereal. NL At the end of your turn, lose 1 HP and gain !B! Block."
+  },
   "${modID}:Strike_R": {
     "NAME": "Strike",
     "DESCRIPTION": "Deal !D! damage.",
