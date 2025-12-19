@@ -28,6 +28,10 @@
     "NAME": "Heel Kick",
     "DESCRIPTION": "Deal !D! damage. NL Discard 1 card."
   },
+  "${modID}:DarkWeb": {
+    "NAME": "Dark Web",
+    "DESCRIPTION": "Gain !B! Block. NL Channel 1 *Dark."
+  },
   "${modID}:Strike_R": {
     "NAME": "Strike",
     "DESCRIPTION": "Deal !D! damage.",
