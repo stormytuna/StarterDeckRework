@@ -40,6 +40,10 @@
     "NAME": "Defensive Protocols",
     "DESCRIPTION": "Gain !B! Block. NL Apply !M! *Lock-On to ALL enemies."
   },
+  "${modID}:Flagellate": {
+    "NAME": "Flagellate",
+    "DESCRIPTION": "Deal !D! damage. NL Gain 4 Mantra if you take unlocked damage this turn."
+  },
   "${modID}:Strike_R": {
     "NAME": "Strike",
     "DESCRIPTION": "Deal !D! damage.",
