@@ -24,6 +24,10 @@
     "NAME": "Tear Gas",
     "DESCRIPTION": "Gain !B! Block. NL Whenever you are attacked this turn, apply !M! Poison."
   },
+  "${modID}:HeelKick": {
+    "NAME": "Heel Kick",
+    "DESCRIPTION": "Deal !D! damage. NL Discard 1 card."
+  },
   "${modID}:Strike_R": {
     "NAME": "Strike",
     "DESCRIPTION": "Deal !D! damage.",
