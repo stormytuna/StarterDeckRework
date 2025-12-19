@@ -32,6 +32,10 @@
     "NAME": "Dark Web",
     "DESCRIPTION": "Gain !B! Block. NL Channel 1 *Dark."
   },
+  "${modID}:DryRun": {
+    "NAME": "Dry Run",
+    "DESCRIPTION": "Your first attack each turn deals !M! additional damage."
+  },
   "${modID}:Strike_R": {
     "NAME": "Strike",
     "DESCRIPTION": "Deal !D! damage.",

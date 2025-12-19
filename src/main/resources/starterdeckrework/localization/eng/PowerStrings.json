@@ -13,5 +13,12 @@
       "When attacked, applies #b",
       " Poison."
     ]
+  },
+  "${modID}:DryRun": {
+    "NAME": "Dry Run",
+    "DESCRIPTIONS": [
+      "Your first attack each turn deals #b",
+      " additional damage."
+    ]
   }
 }
