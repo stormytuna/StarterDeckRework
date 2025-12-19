@@ -49,6 +49,10 @@
     "DESCRIPTION": "If you are in *Wrath, add a *Smite to your hand. NL If you are in *Calm, add a *Safety to your hand. NL Otherwise, add a *Miracle to your hand.",
     "UPGRADE_DESCRIPTION": "If you are in *Wrath, add a *Smite+ to your hand. NL If you are in *Calm, add a *Safety+ to your hand. NL Otherwise, add a *Miracle+ to your hand."
   },
+  "${modID}:Premonition": {
+    "NAME": "Premonition",
+    "DESCRIPTION": "Scry !M!. NL Draw 1."
+  },
   "${modID}:Strike_R": {
     "NAME": "Strike",
     "DESCRIPTION": "Deal !D! damage.",
