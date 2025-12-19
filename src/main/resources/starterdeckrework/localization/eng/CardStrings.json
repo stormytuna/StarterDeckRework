@@ -20,6 +20,10 @@
     "DESCRIPTION": "Draw 2 cards. NL Add !M! shiv into your hand.",
     "UPGRADE_DESCRIPTION": "Draw 2 cards. NL Add !M! shivs into your hand."
   },
+  "${modID}:TearGas": {
+    "NAME": "Tear Gas",
+    "DESCRIPTION": "Gain !B! Block. NL Whenever you are attacked this turn, apply !M! Poison."
+  },
   "${modID}:Strike_R": {
     "NAME": "Strike",
     "DESCRIPTION": "Deal !D! damage.",

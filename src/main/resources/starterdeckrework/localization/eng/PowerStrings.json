@@ -6,5 +6,12 @@
       " HP and gain #b",
       " Block."
     ]
+  },
+  "${modID}:TearGas": {
+    "NAME": "Tear Gas",
+    "DESCRIPTIONS": [
+      "When attacked, applies #b",
+      " Poison."
+    ]
   }
 }
