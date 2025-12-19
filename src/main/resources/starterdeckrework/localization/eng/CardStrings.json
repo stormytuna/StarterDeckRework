@@ -86,6 +86,6 @@
   "${modID}:Defend_P": {
     "NAME": "Defend",
     "DESCRIPTION": "Gain !B! Block.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL If the last card played this combat was a skill scry 2 and draw 1 card."
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL If the last card played this combat was a skill, Scry 2 and draw 1 card."
   }
 }

@@ -7,6 +7,7 @@ import basemod.ModPanel;
 import basemod.interfaces.EditCardsSubscriber;
 import basemod.interfaces.EditStringsSubscriber;
 import basemod.interfaces.PostInitializeSubscriber;
+
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.helpers.FontHelper;
@@ -50,6 +51,7 @@ public class StarterDeckRework implements
     public static boolean swapDefectDefends = false;
     public static boolean swapWatcherStrikes = false;
     public static boolean swapWatcherDefends = false;
+    public static boolean newStartingCards = false;
 
     //This is used to prefix the IDs of various objects like cards and relics,
     //to avoid conflicts between different mods using the same name for things.
@@ -76,6 +78,7 @@ public class StarterDeckRework implements
         defaultSettings.setProperty("swap-defect-defends", Boolean.toString(true));
         defaultSettings.setProperty("swap-watcher-strikes", Boolean.toString(true));
         defaultSettings.setProperty("swap-watcher-defends", Boolean.toString(true));
+        defaultSettings.setProperty("new-starting-cards", Boolean.toString(true));
 
         try {
             SpireConfig config = new SpireConfig("starterdeckrework", "StarterDeckReworkConfig", defaultSettings);
@@ -91,6 +94,7 @@ public class StarterDeckRework implements
             swapDefectDefends = config.getBool("swap-defect-defends");
             swapWatcherStrikes = config.getBool("swap-watcher-strikes");
             swapWatcherDefends = config.getBool("swap-watcher-defends");
+            newStartingCards = config.getBool("new-starting-cards");
 
             logger.info(modID + " added mod settings");
         } catch (Exception e) {
@@ -210,6 +214,16 @@ public class StarterDeckRework implements
                 e.printStackTrace();
             }
         });
+        ModLabeledToggleButton enableNewStartingCardsButton = new ModLabeledToggleButton(configStrings.TEXT[10], 350.0F, 250.0F, Settings.CREAM_COLOR, FontHelper.charDescFont, newStartingCards, settingsPanel, label -> { }, button -> {
+            newStartingCards = button.enabled;
+            try {
+                SpireConfig config = new SpireConfig("starterdeckrework", "StarterDeckReworkConfig", defaultSettings);
+                config.setBool("new-starting-cards", newStartingCards);
+                config.save();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
 
         settingsPanel.addUIElement(enableSwapIroncladStrikesButton);
         settingsPanel.addUIElement(enableSwapIroncladDefendsButton);
@@ -221,6 +235,7 @@ public class StarterDeckRework implements
         settingsPanel.addUIElement(enableSwapDefectDefendsButton);
         settingsPanel.addUIElement(enableSwapWatcherStrikesButton);
         settingsPanel.addUIElement(enableSwapWatcherDefendsButton);
+        settingsPanel.addUIElement(enableNewStartingCardsButton);
 
         Texture badgeTexture = TextureLoader.getTexture(resourcePath("badge.png"));
         BaseMod.registerModBadge(badgeTexture, info.Name, GeneralUtils.arrToString(info.Authors), info.Description, settingsPanel);
