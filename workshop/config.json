@@ -1,9 +1,9 @@
 {
   "steamPublishedID": "3625304566",
   "title": "Starter Deck Rework",
-  "description": "Reworks the starter deck of each character to make them more unique.\n\n[hr][/hr]\n\n[b]Changes[/b]\n[list]\n[*]Strikes and Defends have a unique upgrade that fits one of their gimmicks.\n[*]Ironclad has a Strike replaced with a new card, Frenzy - Lose 3 HP. Gain 1(+1) Strength.\n[*]The Silent has 1 Strike and 1 Defend removed to make her 4/4/1/1.\n[/list]\n\nEverything is configurable.\n\n[hr][/hr]\n\nSource code: https://github.com/stormytuna/StarterDeckRework\n\nIf you enjoy my work, [url\u003dhttps://ko-fi.com/stormytuna]please consider donating[/url]",
+  "description": "Adds 13 new starting cards that you can choose from when starting a run - 3 for each character and a bonus 1 for Ironclad. Also changes how Strikes and Defends upgrade so they fit into their character's gimmicks more.\n\n[hr][/hr]\n\n[b]Changes[/b]\n[list]\n[*]Adds 3 new starting cards for each character (4 for Ironclad)\n[*]Strikes and Defends have a unique upgrade that fit each character's gimmicks.\n[*]Ironclad has 1 Strike removed.\n[*]The Silent has 1 Strike and 1 Defend removed to make her 4/4/1/1.\n[/list]\n\nEverything is configurable.\n\n[hr][/hr]\n\nSource code: https://github.com/stormytuna/StarterDeckRework\n\nIf you are able to contribute translations, it would be much appreciated!\n\nIf you enjoy my work, [url\u003dhttps://ko-fi.com/stormytuna]please consider donating[/url]",
   "visibility": "private",
-  "changeNote": "v1.2\n\n- Fix Frenzy+ not applying correct amount of Strength if it was stacking on existing Strength.\n- Nerf Ironclad Strike+ from 8 damage to 7.\n- Tweak Ironclad Defend+ to grant a flat amount of block plus a bonus for each enemy in combat.\n- Change Watcher Strike+ to shuffle an Insight into draw pile.\n- Change Watcher Defend+ to Scry 2 and Draw 1 if your last played card was a Skill.",
+  "changeNote": "v2.0.0\n\n- Added several new starting cards\n- Added a step after character selection prompting you to select your starting cards\n- Fix config displaying outdated effects for some cards",
   "tags": [
     "Cards",
     "Qol"
