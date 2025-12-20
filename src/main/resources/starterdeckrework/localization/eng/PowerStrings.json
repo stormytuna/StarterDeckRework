@@ -11,7 +11,7 @@
     "NAME": "Tear Gas",
     "DESCRIPTIONS": [
       "When attacked, applies #b",
-      " *Poison."
+      " Poison."
     ]
   },
   "${modID}:DryRun": {
@@ -25,7 +25,7 @@
     "NAME": "Flagellate",
     "DESCRIPTIONS": [
       "If you take unblocked damage, gain #b",
-      " *Mantra."
+      " Mantra."
     ]
   }
 }

@@ -29,6 +29,7 @@ public class SlimeShield extends BaseCard {
     public SlimeShield() {
         super(cardInfo);
         setBlock(BASE_BLOCK, UPGRADE_BLOCK);
+        cardsToPreview = new Slimed();
     }
 
     @Override

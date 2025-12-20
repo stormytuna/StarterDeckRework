@@ -30,6 +30,7 @@ public class HiddenBlade extends BaseCard {
     public HiddenBlade() {
         super(cardInfo);
         setMagic(BASE_SHIVS, UPGRADE_SHIVS);
+        cardsToPreview = new Shiv();
     }
 
     @Override

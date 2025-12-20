@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.tempCards.Miracle;
 import com.megacrit.cardcrawl.cards.tempCards.Safety;
@@ -27,6 +28,21 @@ public class CollapseReality extends BaseCard {
 
     public CollapseReality() {
         super(cardInfo);
+        cardsToPreview = new Miracle();
+    }
+
+    public void renderCardTip(SpriteBatch sb) {
+        if (AbstractDungeon.player != null) {
+            if (AbstractDungeon.player.stance.ID.equals("Wrath")) {
+                cardsToPreview = new Smite();
+            } else if (AbstractDungeon.player.stance.ID.equals("Calm")) {
+                cardsToPreview = new Safety();
+            } else {
+                cardsToPreview = new Miracle();
+            }
+        }
+        
+        super.renderCardTip(sb);
     }
 
     @Override

@@ -17,8 +17,8 @@
   },
   "${modID}:HiddenBlade": {
     "NAME": "Hidden Blade",
-    "DESCRIPTION": "Draw 2 cards. NL Add !M! shiv into your hand.",
-    "UPGRADE_DESCRIPTION": "Draw 2 cards. NL Add !M! shivs into your hand."
+    "DESCRIPTION": "Draw 2 cards. NL Add !M! *Shiv into your hand.",
+    "UPGRADE_DESCRIPTION": "Draw 2 cards. NL Add !M! *Shivs into your hand."
   },
   "${modID}:TearGas": {
     "NAME": "Tear Gas",
@@ -30,7 +30,7 @@
   },
   "${modID}:DarkWeb": {
     "NAME": "Dark Web",
-    "DESCRIPTION": "Gain !B! Block. NL Channel 1 *Dark."
+    "DESCRIPTION": "Gain !B! Block. NL Channel 1 Dark."
   },
   "${modID}:DryRun": {
     "NAME": "Dry Run",
@@ -38,7 +38,7 @@
   },
   "${modID}:DefensiveProtocols": {
     "NAME": "Defensive Protocols",
-    "DESCRIPTION": "Gain !B! Block. NL Apply !M! *Lock-On to ALL enemies."
+    "DESCRIPTION": "Gain !B! Block. NL Apply !M! Lock-On to ALL enemies."
   },
   "${modID}:Flagellate": {
     "NAME": "Flagellate",
@@ -46,8 +46,8 @@
   },
   "${modID}:CollapseReality": {
     "NAME": "Collapse Reality",
-    "DESCRIPTION": "If you are in *Wrath, add a *Smite to your hand. NL If you are in *Calm, add a *Safety to your hand. NL Otherwise, add a *Miracle to your hand.",
-    "UPGRADE_DESCRIPTION": "If you are in *Wrath, add a *Smite+ to your hand. NL If you are in *Calm, add a *Safety+ to your hand. NL Otherwise, add a *Miracle+ to your hand."
+    "DESCRIPTION": "If you are in Wrath, add a *Smite to your hand. NL If you are in Calm, add a *Safety to your hand. NL Otherwise, add a *Miracle to your hand.",
+    "UPGRADE_DESCRIPTION": "If you are in Wrath, add a *Smite+ to your hand. NL If you are in Calm, add a *Safety+ to your hand. NL Otherwise, add a *Miracle+ to your hand."
   },
   "${modID}:Premonition": {
     "NAME": "Premonition",
@@ -81,7 +81,7 @@
   "${modID}:Strike_P": {
     "NAME": "Strike",
     "DESCRIPTION": "Deal !D! damage.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Shuffle an *Insight into your draw pile."
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Shuffle an Insight into your draw pile."
   },
   "${modID}:Defend_P": {
     "NAME": "Defend",
