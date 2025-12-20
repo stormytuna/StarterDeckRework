@@ -11,7 +11,8 @@
       "Swap Defect Defends (+: Gain 6 Block. Draw 1 card.)",
       "Swap Watcher Strikes (+: Deal 8 damage. Shuffle an Insight into your draw pile.)",
       "Swap Watcher Defends (+: Gain 6 Block. If the last card played this combat was a skill, scry 2 and draw 1.)",
-      "Enable New Starting Cards"
+      "Enable New Starting Cards",
+      "Number of New Starting Cards to Choose From"
     ]
   },
   "${modID}:ChooseStartingCards": {
