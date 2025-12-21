@@ -67,6 +67,8 @@ public class PatchNeowRoom {
 				allCards.add(new Flagellate());
 				allCards.add(new Premonition());
 				allCards.add(new Vigilance());
+			} else {
+				return;
 			}
 
 			if (previouslyChosenCards == null) {
