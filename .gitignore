@@ -40,3 +40,9 @@ buildNumber.properties
 .project
 # JDT-specific (Eclipse Java Development Tools)
 .classpath
+
+# other stuffs
+workshop/README.md
+workshop/steam_appid.txt
+.factorypath
+.settings

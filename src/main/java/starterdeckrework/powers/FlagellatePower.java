@@ -17,21 +17,28 @@ public class FlagellatePower extends BasePower {
     private static final AbstractPower.PowerType TYPE = PowerType.BUFF;
     private static final boolean TURN_BASED = true;
 
+    private boolean tookDamage = false;
+
     public FlagellatePower(AbstractCreature owner, int amount) {
         super(POWER_ID, TYPE, TURN_BASED, owner, amount);
     }
 
     public int onAttacked(DamageInfo info, int damageAmount)  {
         if (info.owner != null && info.type != DamageType.THORNS && info.type != DamageType.HP_LOSS && info.owner != owner && damageAmount > 0) {
-            flash();
-            addToTop(new ApplyPowerAction(owner, owner, new MantraPower(owner, this.amount)));
-            addToBot(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, this));
+            tookDamage = true;
         }
 
         return damageAmount;
     }
 
     public void atStartOfTurn()  {
+        if (tookDamage) {
+            // Was originally in onAttacked but entering Divinity during enemies' turn brings you out of it during your turn
+            flash();
+            addToTop(new ApplyPowerAction(owner, owner, new MantraPower(owner, this.amount)));
+            addToBot(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, this));
+        }
+
         addToBot(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, this));
     }
 
