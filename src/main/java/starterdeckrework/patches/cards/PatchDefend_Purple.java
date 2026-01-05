@@ -68,7 +68,7 @@ public class PatchDefend_Purple {
     public static class Defend_Purple_PostfixTriggerOnGlowCheck {
         @SpirePostfixPatch
         public static void triggerOnGlowCheck(AbstractCard __instance) {
-            if (!(__instance instanceof Defend_Watcher)) {
+            if (!(__instance instanceof Defend_Watcher) || !__instance.upgraded) {
                 return;
             }
 
