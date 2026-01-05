@@ -2,8 +2,8 @@
   "steamPublishedID": "3625304566",
   "title": "Starter Deck Rework",
   "description": "[h2]Changes[/h2]\n[list]\n[*]Adds 3 new starting cards for each character (4 for Ironclad)\n[*]Strikes and Defends have a unique upgrade that fit each character's gimmicks.\n[*]Ironclad has 1 Strike removed.\n[*]The Silent has 1 Strike and 1 Defend removed to make her 4/4/1/1.\n[/list]\n\nEverything is configurable.\n\n[hr][/hr]\n\nSource code: https://github.com/stormytuna/StarterDeckRework\n\nIf you are able to contribute translations, it would be much appreciated!\n\nIf you enjoy my work, [url\u003dhttps://ko-fi.com/stormytuna]please consider donating[/url]",
-  "visibility": "private",
-  "changeNote": "v2.0.4\n\n- Fix Flagellate applying Mantra too early\n- Public re-release",
+  "visibility": "public",
+  "changeNote": "v2.0.5\n\n- Fix Watcher Defends glowing when un-upgraded\n- Change Frenzy card art to better match other new cards",
   "tags": [
     "Cards",
     "Qol"
